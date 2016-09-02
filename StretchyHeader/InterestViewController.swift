@@ -70,6 +70,8 @@ class InterestViewController: UIViewController {
 
 }
 
+
+
 extension InterestViewController : UITableViewDataSource {
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -84,6 +86,8 @@ extension InterestViewController : UITableViewDataSource {
         return cell
     }
 }
+
+
 
 extension InterestViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(scrollView: UIScrollView) {

@@ -19,7 +19,7 @@ class InterestHeaderView: UIView {
     private func updateUI() {
         headerImageView.image = interest.featuredImage
         titleLabel.text = interest.title
-        pullDownToClose.text = "PULL down to close"
+        pullDownToClose.text = "Pull down to close"
         pullDownToClose.hidden = true
     }
 
