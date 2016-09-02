@@ -12,8 +12,6 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var backgroundImageView: UIImageView! // explicitly unwrapping, don't need initializer for this homeviewcontroller
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var currentUserProfileImageButton: UIButton!
-    @IBOutlet weak var currentUserFullNameButton: UIButton!
 
     private var interests = Interest.createInterests()
     
@@ -27,6 +25,7 @@ class HomeViewController: UIViewController {
 
 }
 
+// to comfort uicollection protocol
 extension HomeViewController: UICollectionViewDataSource {
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1

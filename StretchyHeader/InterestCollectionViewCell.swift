@@ -11,6 +11,7 @@ import UIKit
 class InterestCollectionViewCell: UICollectionViewCell {
     
     //MARK: Public
+    // willSet and didSet are property observes, are not called when a property is first initialiazed. They are only called when the property's value is set outside of an initialization context.
     var interest: Interest! {
         didSet {
             updateUI()
