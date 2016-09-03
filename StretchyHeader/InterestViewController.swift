@@ -18,7 +18,7 @@ class InterestViewController: UIViewController {
     private var headerMaskLayer: CAShapeLayer!
     
     // MARK: Public API
-    var interest: Interest! = Interest.createInterests()[0]
+//    var interest: Interest! = Interest.createInterests()[0]
 
     override func viewDidLoad() {
         super.viewDidLoad()
