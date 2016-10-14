@@ -24,7 +24,7 @@ class InterestCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var interestTitleLable: UILabel!
     
     
-    private func updateUI() {
+    fileprivate func updateUI() {
         interestTitleLable.text = interest.title
         featuredImageView.image = interest.featuredImage
     }

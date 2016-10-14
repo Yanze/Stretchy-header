@@ -12,7 +12,6 @@
 		E00BEED81D78B7740044A892 /* StretchyHeader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E00BEED61D78B7740044A892 /* StretchyHeader.xcdatamodeld */; };
 		E00BEEDA1D78B7740044A892 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E00BEED91D78B7740044A892 /* Assets.xcassets */; };
 		E00BEEDD1D78B7740044A892 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E00BEEDB1D78B7740044A892 /* LaunchScreen.storyboard */; };
-		E00BEEEA1D78C4DC0044A892 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00BEEE91D78C4DC0044A892 /* HomeViewController.swift */; };
 		E00BEEEE1D78CE800044A892 /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00BEEED1D78CE800044A892 /* Interest.swift */; };
 		E00BEEF01D78D8850044A892 /* InterestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00BEEEF1D78D8850044A892 /* InterestCollectionViewCell.swift */; };
 		E00BEF001D7A093E0044A892 /* InterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00BEEFF1D7A093E0044A892 /* InterestViewController.swift */; };
@@ -27,7 +26,6 @@
 		E00BEED91D78B7740044A892 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E00BEEDC1D78B7740044A892 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E00BEEDE1D78B7740044A892 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E00BEEE91D78C4DC0044A892 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E00BEEED1D78CE800044A892 /* Interest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interest.swift; sourceTree = "<group>"; };
 		E00BEEEF1D78D8850044A892 /* InterestCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestCollectionViewCell.swift; sourceTree = "<group>"; };
 		E00BEEFF1D7A093E0044A892 /* InterestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestViewController.swift; sourceTree = "<group>"; };
@@ -64,7 +62,6 @@
 		E00BEECE1D78B7740044A892 /* StretchyHeader */ = {
 			isa = PBXGroup;
 			children = (
-				E00BEEE91D78C4DC0044A892 /* HomeViewController.swift */,
 				E00BEEED1D78CE800044A892 /* Interest.swift */,
 				E00BEF011D7A0A760044A892 /* InterestHeaderView.swift */,
 				E00BEEFF1D7A093E0044A892 /* InterestViewController.swift */,
@@ -119,6 +116,7 @@
 				TargetAttributes = {
 					E00BEECB1D78B7740044A892 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -163,7 +161,6 @@
 				E00BEED81D78B7740044A892 /* StretchyHeader.xcdatamodeld in Sources */,
 				E00BEED01D78B7740044A892 /* AppDelegate.swift in Sources */,
 				E00BEF021D7A0A760044A892 /* InterestHeaderView.swift in Sources */,
-				E00BEEEA1D78C4DC0044A892 /* HomeViewController.swift in Sources */,
 				E00BEEEE1D78CE800044A892 /* Interest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +280,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "River-Inn-Technology.StretchyHeader";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -294,6 +292,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "River-Inn-Technology.StretchyHeader";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

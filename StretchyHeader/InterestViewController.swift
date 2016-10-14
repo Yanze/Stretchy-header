@@ -11,11 +11,11 @@ import UIKit
 class InterestViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    private let tableHeaderHeight: CGFloat = 330.0
-    private let tableHeaderCutAway: CGFloat = 50.0
+    fileprivate let tableHeaderHeight: CGFloat = 330.0
+    fileprivate let tableHeaderCutAway: CGFloat = 50.0
     
-    private var headerView: InterestHeaderView!
-    private var headerMaskLayer: CAShapeLayer!
+    fileprivate var headerView: InterestHeaderView!
+    fileprivate var headerMaskLayer: CAShapeLayer!
     
     // MARK: Public API
 //    var interest: Interest! = Interest.createInterests()[0]
@@ -30,7 +30,7 @@ class InterestViewController: UIViewController {
         tableView.contentOffset = CGPoint(x: 0, y: -tableHeaderHeight)
         
         headerMaskLayer = CAShapeLayer()
-        headerMaskLayer.fillColor = UIColor.blueColor().CGColor
+        headerMaskLayer.fillColor = UIColor.blue.cgColor
         headerView.layer.mask = headerMaskLayer
         
         updateHeaderView()
@@ -60,12 +60,16 @@ class InterestViewController: UIViewController {
         
         // cut away the header
         let path = UIBezierPath()
-        path.moveToPoint(CGPoint(x:0, y: 0))
-        path.addLineToPoint(CGPoint(x:headerRect.width, y: 0))
-        path.addLineToPoint(CGPoint(x:headerRect.width, y: headerRect.height))
-        path.addLineToPoint(CGPoint(x:0, y:headerRect.height - tableHeaderCutAway))
+        path.move(to: CGPoint(x:0, y: 0))
+        path.addLine(to: CGPoint(x:headerRect.width, y: 0))
+        path.addLine(to: CGPoint(x:headerRect.width, y: headerRect.height))
+        path.addLine(to: CGPoint(x:0, y:headerRect.height - tableHeaderCutAway))
         
-        headerMaskLayer?.path = path.CGPath
+        headerMaskLayer?.path = path.cgPath
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 
 }
@@ -73,16 +77,16 @@ class InterestViewController: UIViewController {
 
 
 extension InterestViewController : UITableViewDataSource {
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath:indexPath) as UITableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for:indexPath) as UITableViewCell
         return cell
     }
 }
@@ -90,7 +94,7 @@ extension InterestViewController : UITableViewDataSource {
 
 
 extension InterestViewController: UIScrollViewDelegate {
-    func scrollViewDidScroll(scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         updateHeaderView()
     }
 }

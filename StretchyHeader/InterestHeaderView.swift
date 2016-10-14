@@ -16,11 +16,11 @@ class InterestHeaderView: UIView {
         }
     }
     
-    private func updateUI() {
+    fileprivate func updateUI() {
         headerImageView.image = interest.featuredImage
         titleLabel.text = interest.title
         pullDownToClose.text = "Pull down to close"
-        pullDownToClose.hidden = true
+        pullDownToClose.isHidden = true
     }
 
     @IBOutlet weak var headerImageView: UIImageView!
@@ -31,8 +31,8 @@ class InterestHeaderView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        closeButtonBlurBackgroundView.layer.cornerRadius = closeButtonBlurBackgroundView.bounds.width / 2
-        
-        closeButtonBlurBackgroundView.layer.masksToBounds = true
+//        closeButtonBlurBackgroundView.layer.cornerRadius = closeButtonBlurBackgroundView.bounds.width / 2
+//        
+//        closeButtonBlurBackgroundView.layer.masksToBounds = true
     }
 }
