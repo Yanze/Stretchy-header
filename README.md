@@ -1,6 +1,6 @@
 # Stretchy-header
 
-This is a template to showcase a stretchy header
+This is a template to showcase a stretching header
 
 Coded in Swift
 
